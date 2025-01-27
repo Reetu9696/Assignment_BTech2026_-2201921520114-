@@ -1,0 +1,59 @@
+abstract class Shape {
+    public abstract double Area(); // Abstract method
+}
+
+class Circle extends Shape {
+    private double radius;
+
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
+    @Override
+    public double Area() {
+        return Math.PI * radius * radius; // Correct formula for circle area
+    }
+}
+
+class Rectangle extends Shape {
+    private double width;
+    private double height;
+
+    public Rectangle(double width, double height) {
+        this.width = width;
+        this.height = height;
+    }
+
+    @Override
+    public double Area() {
+        return width * height; // Correct formula for rectangle area
+    }
+}
+
+class Triangle extends Shape {
+    private double base;
+    private double height;
+
+    public Triangle(double base, double height) {
+        this.base = base;
+        this.height = height;
+    }
+
+    @Override
+    public double Area() {
+        return 0.5 * base * height; // Correct formula for triangle area
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Circle c = new Circle(4);
+        System.out.println("Area of circle: " + c.Area());
+
+        Rectangle r = new Rectangle(12, 67);
+        System.out.println("Area of rectangle: " + r.Area());
+
+        Triangle t = new Triangle(10, 5);
+        System.out.println("Area of triangle: " + t.Area());
+    }
+}
