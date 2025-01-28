@@ -1,0 +1,52 @@
+class Book {
+    private String title;
+    private String author;
+    private double price;
+
+    // Default constructor
+    public Book() {
+        this.title = "Unknown Title";
+        this.author = "Unknown Author";
+        this.price = 0.0;
+        System.out.println("Default Constructor:");
+        printDetails();
+    }
+
+    // Constructor with title and author
+    public Book(String title, String author) {
+        this.title = title;
+        this.author = author;
+        this.price = 0.0;
+        System.out.println("Constructor with Title and Author:");
+        printDetails();
+    }
+
+    // Constructor with title, author, and price
+    public Book(String title, String author, double price) {
+        this.title = title;
+        this.author = author;
+        this.price = price;
+        System.out.println("Constructor with Title, Author, and Price:");
+        printDetails();
+    }
+
+    // Method to print book details
+    public void printDetails() {
+        System.out.println("Title: " + title);
+        System.out.println("Author: " + author);
+        System.out.println("Price: $" + price);
+        System.out.println();
+    }
+
+    // Main method
+    public static void main(String[] args) {
+        // Using default constructor
+        Book book1 = new Book();
+
+        // Using constructor with title and author
+        Book book2 = new Book("The Great Gatsby", "F. Scott Fitzgerald");
+
+        // Using constructor with title, author, and price
+        Book book3 = new Book("1984", "George Orwell", 15.99);
+    }
+}
