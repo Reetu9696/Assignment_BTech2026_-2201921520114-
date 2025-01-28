@@ -1,0 +1,12 @@
+class Solution {
+    public int addMinimum(String word) {
+        int ans=0,i=0;
+        int a;
+        while(i<word.length()){
+            a=(i<word.length() && word.charAt(i)=='a')? i++:ans++;
+            a=(i<word.length() && word.charAt(i)=='b')? i++:ans++;        
+            a=(i<word.length() && word.charAt(i)=='c')? i++:ans++;
+            }
+        return ans;
+    }
+}
