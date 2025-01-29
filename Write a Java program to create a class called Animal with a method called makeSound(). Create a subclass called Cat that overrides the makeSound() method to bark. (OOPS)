@@ -1,0 +1,26 @@
+// Define a superclass named Animal
+public class Animal {
+    // Method to make a generic animal sound
+    public void makeSound() {
+        System.out.println("The animal makes a sound.");
+    }
+}
+
+// Define a subclass named Cat that extends Animal
+class Cat extends Animal {
+    @Override
+    public void makeSound() {
+        System.out.println("The cat quarrels.");
+    }
+}
+
+// Define the Main class to run the program
+public class Main {
+    public static void main(String[] args) {
+        Animal animal = new Animal(); // Create an instance of Animal
+        Cat cat = new Cat();          // Create an instance of Cat
+
+        animal.makeSound(); // Calls Animal's makeSound()
+        cat.makeSound();    // Calls Cat's makeSound()
+    }
+}
