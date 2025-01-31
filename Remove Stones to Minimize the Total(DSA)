@@ -1,0 +1,19 @@
+class Solution {
+    public int minStoneSum(int[] piles, int k) {
+        PriorityQueue<Integer> pq=new PriorityQueue<>((a,b)->piles[b]-piles[a]);
+        for(int i=0;i<piles.length;i++){
+            pq.add(i);
+        }
+        for(int i=0;i<k;i++){
+            int maxIdx=pq.poll();
+            piles[maxIdx]-=piles[maxIdx]/2;
+            pq.add(maxIdx);
+        }
+        int stones=0;
+        for(int num:piles){
+            stones+=num;
+
+        }
+        return stones;
+    }
+}
