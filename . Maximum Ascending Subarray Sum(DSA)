@@ -1,0 +1,17 @@
+class Solution {
+    public int maxAscendingSum(int[] nums) {
+        int currentsum=nums[0];
+        int maxsum=nums[0];
+        for(int i=1;i<nums.length;i++){
+            if (nums[i]>nums[i-1]){
+                currentsum=currentsum+nums[i];
+            }
+            else{
+                maxsum=Math.max(currentsum,maxsum);
+                currentsum=nums[i];
+            }
+        }
+        maxsum=Math.max(currentsum,maxsum);
+        return maxsum;
+    }
+}
